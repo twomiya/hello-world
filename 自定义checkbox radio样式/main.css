@@ -1,0 +1,113 @@
+.check_box{
+	display: inline-block;
+	width: 20px;
+	position: relative;
+	z-index: 9;
+}
+.check_box label {
+	cursor: pointer;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	top: 3px;
+  left: 0;
+	background: #fff;
+	border:1px solid #999;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	-ms-border-radius: 2px;
+	-o-border-radius: 2px;
+	border-radius: 2px;
+}
+.check_box label:after {
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 5px;
+	background: transparent;
+	top: 2px;
+	left: 2px;
+	border: 2px solid red;
+	border-top: none;
+	border-right: none;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+	input[type=checkbox]{
+		visibility: hidden;
+	}
+.check_box input[type=checkbox]:checked + label{
+	border:1px solid red;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+.check_box input[type=checkbox]:checked + label:after {
+	opacity: 1;
+}
+
+
+.radio_box{
+	display: inline-block;
+	width: 20px;
+	position: relative;
+	z-index: 9;
+}
+.radio_box label {
+	cursor: pointer;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	top: 3px;
+  left: 0;
+	background: #fff;
+	border:1px solid #999;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+}
+.radio_box label:after {
+	opacity: 0;
+	content: '';
+	/* position: absolute; */
+	width: 8px;
+	height: 8px;
+	background: red;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+	/* top: 2px;
+	left: 2px; */
+}
+	input[type=radio]{
+		visibility: hidden;
+	}
+.radio_box input[type=radio]:checked + label{
+	border:1px solid red;
+	background: red;
+	-webkit-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+.radio_box input[type=radio]:checked + label:after {
+	opacity: 1;
+	opacity: 0;
+	content: '';
+	/* position: absolute; */
+	width: 8px;
+	height: 8px;
+	background: red;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+}
